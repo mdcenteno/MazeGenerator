@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MazeGenerator", "MazeGenerator\MazeGenerator.shproj", "{4FD2F8A3-3F36-448C-AC4B-676AA5920726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeGeneratorConsole", "MazeGeneratorConsole\MazeGeneratorConsole.csproj", "{F44A8A66-01A5-489A-9246-5542095AA9E2}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MazeGenerator\MazeGenerator.projitems*{4fd2f8a3-3f36-448c-ac4b-676aa5920726}*SharedItemsImports = 13
+		MazeGenerator\MazeGenerator.projitems*{f44a8a66-01a5-489a-9246-5542095aa9e2}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F44A8A66-01A5-489A-9246-5542095AA9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44A8A66-01A5-489A-9246-5542095AA9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44A8A66-01A5-489A-9246-5542095AA9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44A8A66-01A5-489A-9246-5542095AA9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D442C9D6-2E53-410C-9B4E-13B62F87A89D}
+	EndGlobalSection
+EndGlobal
