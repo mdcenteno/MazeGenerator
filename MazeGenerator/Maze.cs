@@ -10,7 +10,7 @@ namespace Generator
 
         int width;
         int height;
-        MazeEngine mazeGenerator = new MazeEngine();
+        MazeEngine mazeEngine = new MazeEngine();
 
         public Maze(int width, int height)
         {
@@ -19,16 +19,16 @@ namespace Generator
         }
 
         public void Generate()
-        {            
-            mazeGenerator.Generate(width, height);
+        {
+            mazeEngine.Generate(width, height);
             GenerateMaze();
             ExpandToMap();
         }
         
         private void GenerateMaze()
         {
-            int width = mazeGenerator.matrix[0].Count * 2 + 1;
-            int height = mazeGenerator.matrix.Count * 2 + 1;
+            int width = mazeEngine.matrix[0].Count * 2 + 1;
+            int height = mazeEngine.matrix.Count * 2 + 1;
             for (int j = 0; j < height; j++)
             {
                 List<int> l = new List<int>();
@@ -43,17 +43,12 @@ namespace Generator
 
         private void ExpandToMap()
         {
-            for (int j = 0; j < mazeGenerator.matrix.Count; j++)            
-                for (int i = 0; i < mazeGenerator.matrix[j].Count; i++)
+            for (int j = 0; j < mazeEngine.matrix.Count; j++)            
+                for (int i = 0; i < mazeEngine.matrix[j].Count; i++)
                 {
-                    Tiles[(j * 2) + 0][(i * 2) + 1] = ExpandCell(mazeGenerator.matrix[j][i].value[Direction.Up]);
-                    Tiles[(j * 2) + 1][(i * 2) + 0] = ExpandCell(mazeGenerator.matrix[j][i].value[Direction.Left]);
-                }            
-        }
-
-        private int ExpandCell(CellValue cv)
-        {
-            return cv == CellValue.Open ? 0 : 1;            
+                    Tiles[(j * 2) + 0][(i * 2) + 1] = mazeEngine.matrix[j][i].value[Direction.Up] == CellValue.Open ? 0 : 1;
+                    Tiles[(j * 2) + 1][(i * 2) + 0] = mazeEngine.matrix[j][i].value[Direction.Left] == CellValue.Open ? 0 : 1;
+                }
         }
 
     }
