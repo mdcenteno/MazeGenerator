@@ -51,5 +51,22 @@ namespace Generator
                 }
         }
 
+        public override string ToString()
+        {
+            return Output(' ', '#');
+        }
+
+        public string Output(char space, char wall)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (List<int> row in Tiles)
+            {
+                foreach (int cell in row)
+                    sb.Append(cell == 0 ? space : wall);
+                sb.AppendLine();
+            }
+            return sb.ToString();
+        }
+
     }
 }

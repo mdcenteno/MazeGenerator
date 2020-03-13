@@ -13,17 +13,7 @@ namespace MapGeneratorConsole
         {
             Maze maze = new Maze(30, 20);
             maze.Generate();
-            Output(maze.Tiles);
-        }
-
-        private static void Output(List<List<int>> Maze)
-        {
-            foreach (List<int> row in Maze)
-            {
-                foreach (int cell in row)
-                    Console.Write(cell == 0 ? " " : "#");
-                Console.WriteLine();
-            }
+            Console.WriteLine(maze.ToString());
         }
 
     }
