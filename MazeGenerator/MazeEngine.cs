@@ -68,8 +68,7 @@ namespace Generator
 
         private MazeNode GenerateValidNeighbour(int x, int y, Direction d)
         {
-            MazeNode valid = new MazeNode(x, y);
-            valid.direction = d;
+            MazeNode valid = new MazeNode(x, y) { direction = d };
             return valid.Valid(width, height) && matrix[valid.position.Y][valid.position.X].Valid(width, height) ? valid : null;
         }
 

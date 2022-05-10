@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MapGenerator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,22 +68,4 @@ namespace Generator
         }
 
     }
-
-    class Pair<T>
-    {
-        public T X;
-        public T Y;
-
-        public Pair()
-        {
-
-        }
-
-        public Pair(T X, T Y)
-        {
-            this.X = X;
-            this.Y = Y;
-        }
-    }
-
 }

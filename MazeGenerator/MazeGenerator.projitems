@@ -12,5 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MazeEngine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MazeNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Maze.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pair.cs" />
   </ItemGroup>
 </Project>

@@ -8,9 +8,9 @@ namespace Generator
     {
         public List<List<int>> Tiles { get; } = new List<List<int>>();
 
-        int width;
-        int height;
-        MazeEngine mazeEngine = new MazeEngine();
+        readonly int width;
+        readonly int height;
+        readonly MazeEngine mazeEngine = new MazeEngine();
 
         public Maze(int width, int height)
         {
