@@ -18,11 +18,16 @@ namespace Generator
             this.height = height;
         }
 
-        public void Generate()
+        public void Generate(bool aberto = false)
         {
             mazeEngine.Generate(width, height);
             GenerateMaze();
             ExpandToMap();
+            if (aberto)
+            {
+                Tiles[1][0] = 0;
+                Tiles[width * 2 - 1][height * 2] = 0;
+            }
         }
         
         private void GenerateMaze()
@@ -53,10 +58,10 @@ namespace Generator
 
         public override string ToString()
         {
-            return Output(' ', '#');
+            return Output("  ", "██");
         }
 
-        public string Output(char space, char wall)
+        public string Output(string space, string wall)
         {
             StringBuilder sb = new StringBuilder();
             foreach (List<int> row in Tiles)
