@@ -26,7 +26,7 @@ namespace Generator
             if (aberto)
             {
                 Tiles[1][0] = 0;
-                Tiles[width * 2 - 1][height * 2] = 0;
+                Tiles[height* 2 - 1][width * 2] = 0;
             }
         }
         
